@@ -11,12 +11,17 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<AuthLayout />} />
-          <Route index element={<HomePage />} />
-          <Route path="login" element={<Login />} />
-          <Route path="register" element={<RegisterPage />} />
-          <Route path="forgot-password" element={<ForgotPasswordPage />} />\
-          <Route path="confirm-account" element={<ConfirmAccountPage />} />
+          <Route path="/" element={<AuthLayout />}>
+            <Route index element={<HomePage />} />
+            <Route path="login" element={<Login />} />
+            <Route path="register" element={<RegisterPage />} />
+            <Route path="forgot-password" element={<ForgotPasswordPage />} />
+            <Route
+              path="confirm-account/:id"
+              element={<ConfirmAccountPage />}
+            />
+          </Route>
+
           <Route path="*" element={<h1>404 Not Found</h1>} />
         </Routes>
       </BrowserRouter>
@@ -25,3 +30,16 @@ function App() {
 }
 
 export default App;
+
+/*
+          <Route path="/" element={<AdminLayout />}>
+            <Route index element={<HomePage />} />
+            <Route path="login" element={<Login />} />
+            <Route path="register" element={<RegisterPage />} />
+            <Route path="forgot-password" element={<ForgotPasswordPage />} />
+            <Route
+              path="confirm-account/:id"
+              element={<ConfirmAccountPage />}
+            />
+          </Route>
+          */

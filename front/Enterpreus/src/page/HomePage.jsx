@@ -3,7 +3,7 @@
 const HomeComponent = () => {
   return (
     <>
-      <h2 className="text-4xl font-bold">Hecho en casa</h2>
+      <h2 >Hecho en casa</h2>
     </>
   );
 };

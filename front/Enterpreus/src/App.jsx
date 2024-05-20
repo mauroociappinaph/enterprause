@@ -1,5 +1,20 @@
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import HomePage from "./page/HomePage";
+import AuthLayout from "./layout/AuthLayout";
+import Login from "./page/LoginPage";
+
 function App() {
-  return <h1 className="text-4xl font-bold underline">Hecho en casa </h1>;
+  return (
+    <div className="App">
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<AuthLayout />} />
+          <Route path="/homepage" element={<HomePage />} />
+          <Route path="/login" element={<Login />} />
+        </Routes>
+      </BrowserRouter>
+    </div>
+  );
 }
 
 export default App;
